@@ -4,16 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Game PWA</title>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAA5CAYAAACMGIOFAAAACXBIWXMAAAsTAAALEwEAmpwYAAAE8UlEQVRoBe2aW0gUURjHf2e2XdfdNS/5oKZoXrJS6yEkKnoQCXqoByXpoR6ih4ggCKIHQYQeRBCCKHrwoQeBKIoe6kEkeuhBBKGHehBBBKGHehBBBKGHehBBBKGHCKLooQdBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGHehBBBKGH<!DOCTYPE html>
+<html lang="th" ng-app="quizApp">
     
     <!-- PWA Manifest -->
-    <link rel="manifest" href="data:application/json;base64,eyJuYW1lIjoiUXVpeiBHYW1lIFBXQSIsInNob3J0X25hbWUiOiJRdWl6R2FtZSIsImRlc2NyaXB0aW9uIjoiT2ZmbGluZSBRdWl6IEdhbWUgUFdBIiwic3RhcnRfdXJsIjoiLyIsImRpc3BsYXkiOiJzdGFuZGFsb25lIiwiYmFja2dyb3VuZF9jb2xvciI6IiMyMTk2RjMiLCJ0aGVtZV9jb2xvciI6IiMyMTk2RjMiLCJpY29ucyI6W3sic3JjIjoiZGF0YTppbWFnZS9zdmcreG1sO2Jhc2U2NCxQSE4yWnlCM2FXUjBhRDBpTVRJNGlpQm9aV2xuYUhROUlqRXlPQ0lnZG1sbGQwSnZlRDBpTUNBd0lERXlPQ0F4TWpnaUlIaHRiRzV6UFNKb2RIUndPaTh2ZDNkM0xuY3pMbTl5Wnk4eU1EQXdMM04yWnlJK1BHSnNiMk5yYzJoaGNHVWdabWxzYkQwaVV6VTFOVFUxSWlCeWVEMGlOaUlnZVQwaU5pSWdkMmxrZEdnOUlqRXhOaUlnYUdWcFoyaDBQU0l4TVRZaUx6NDhkR1Y0ZENCNFBTSTJOQ0lnZVQwaU16QWlJR1pwYkd3OUluZG9hWFJsSWlCbWIyNTBMWE5wZW1VOUlqUTRJaUJtYjI1MExYZGxhV2RvZEQwaVltOXNaQ0krVXp3dmRHVjRkRDQ4TDNOMlp6ND0iLCJzaXplcyI6IjEyOHgxMjgiLCJ0eXBlIjoiaW1hZ2Uvc3ZnK3htbCJ9XX0=">
+    <link rel="manifest" href="data:application/json;base64,eyJuYW1lIjoiUXVpeiBHYW1lIFBXQSIsInNob3J0X25hbWUiOiJRdWl6R2FtZSIsImRlc2NyaXB0aW9uIjoiT2ZmbGluZSBRdWl6IEdhbWUgUFdBIiwic3RhcnRfdXJsIjoiLyIsImRpc3BsYXkiOiJzdGFuZGFsb25lIiwiYmFja2dyb3VuZF9jb2xvciI6IiM2NjdlZWEiLCJ0aGVtZV9jb2xvciI6IiM2NjdlZWEiLCJpY29ucyI6W3sic3JjIjoiZGF0YTppbWFnZS9zdmcreG1sO2Jhc2U2NCxQSE4yWnlCM2FXUjBhRDBpTVRJNGlpQm9aV2xuYUhROUlqRXlPQ0lnZG1sbGQwSnZlRDBpTUNBd0lERXlPQ0F4TWpnaUlIaHRiRzV6UFNKb2RIUndPaTh2ZDNkM0xuY3pMbTl5Wnk4eU1EQXdMM04yWnlJK1BHSnNiMk5yYzJoaGNHVWdabWxzYkQwaVUyVTJOMlU1T1VraVlYTndhR1ZzWkQwaU1ETWlJSGh6UFNJMk5pSWdlVDBpTmlJZ2QybGtkR2c5SW1RM0x6UWlJR2hsYVdkb2REMGlNVEUySWlBdlBpTjdQSFJsZUhSZ2VEMGlNelFpSUhrOUlqTXdJaUJtYVd4c1BTSjNhR2wwWlNJZ1ptOXVkQzF6YVhwbFBTSTBPQ0lnWm05dWRDMTNaV2xuYUhROUlubDNPQ0lnZG5WdGNDMWhaRzFwYmlJdGJXOWthV1pwWlNJZ1ltbzJJeXNpUGxGMWFYcDhQQzlrYnpjZVBIdGJReTFDWjNGdGJTUjNYejQ4TDNOMlp6ND0iLCJzaXplcyI6IjEyOHgxMjgiLCJ0eXBlIjoiaW1hZ2Uvc3ZnK3htbCJ9XX0=">
     
     <!-- PWA Meta Tags -->
-    <meta name="theme-color" content="#2196F3">
+    <meta name="theme-color" content="#667eea">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Quiz Game">
+    
+    <!-- Additional iOS Status Bar Styling -->
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="format-detection" content="telephone=no">
     
     <!-- AngularJS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
@@ -27,9 +34,12 @@
         
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             color: #333;
+            /* iOS Status Bar Styling */
+            padding-top: env(safe-area-inset-top);
+            padding-bottom: env(safe-area-inset-bottom);
         }
         
         .container {
@@ -197,7 +207,7 @@
         
         .offline-indicator {
             position: fixed;
-            top: 10px;
+            top: calc(10px + env(safe-area-inset-top));
             right: 10px;
             padding: 5px 10px;
             background: #4CAF50;
